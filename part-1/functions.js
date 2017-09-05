@@ -1,4 +1,6 @@
-//function that finds the month for a given date and returns the string
+// Write a function month(date) to find the month for a given Date object,
+// returing the name of the month as a string
+// ('January', 'February', 'March', 'April', 'May', ... etc).
 function month(date){
   switch(date.getMonth()){
     case 0:
@@ -40,7 +42,10 @@ function month(date){
   }
 }
 
-//function that reverses a sentence
+// Write a function reverseSentence(string) that takes a string of words
+// and returns a string with the words in reverse order. If there is only one
+// word in the string return it unchanged.
+// Consider any series of non-space characters a word.
 function reverseSentence(string){
   let split = string.split(" ");
   let reverse = [split.length];
@@ -49,7 +54,9 @@ function reverseSentence(string){
   }
 }
 
-//function that names all the properties of an object
+// Write a function nameProps(obj) that returns the names of the properties
+// an object has in alphabetical order. Ignore symbolic properties
+// and count only the "own properties" (not inherited) of the object.
 function nameProps(obj){
   let properties = [];
   for(let key in obj){
@@ -59,8 +66,10 @@ function nameProps(obj){
   return properties;
 }
 
-/*function that removes strings between a min alphabetical
-value and a max alphabetical value*/
+// Write a function filterBetween(array, min, max) that takes
+// an array of strings, a min value, and a max value.
+// It returns a new array containing only the elements that
+// come after min alphabetically and before max.
 function filterBetween(array, min, max){
   let filter = [];
   for(let i = 0; i < array.length; i++){
@@ -70,4 +79,12 @@ function filterBetween(array, min, max){
       filter.push(array[i]);
     }
   }
+}
+
+//Exporting for testing
+module.exports = {
+  month,
+  reverseSentence,
+  nameProps,
+  filterBetween
 }
