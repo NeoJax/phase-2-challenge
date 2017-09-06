@@ -1,17 +1,18 @@
 When you run a command in the terminal, where does BASH look for that command?
-
+BASH Looks into the current $PATH
 
 On a UNIX computer, how do you stop a running process?
 
-
 What packages do you have installed via homebrew?
+I'm not sure if you are asking how to list that or what i have installed so I will put both down.
+
 
 
 On a UNIX computer, how do you find the process id of a running process?
 
 
 In a terminal, what does control-c do?
-
+It stops whatever is currently running in the terminal.
 
 What would be the result of typing the following commands?
 $ cd /Users/steve
@@ -20,7 +21,10 @@ $ touch bar
 $ cd foo
 $ touch bar
 $ pwd
-
+This would change the current directory to /Users/steve and make a
+directory named foo. After that it creates a file named bar. Then
+it goes into the directory foo and makes another file named bar.
+Finally it lists the current directory named /Users/steve/foo
 
 How do you set an environment variable in your shell?
 
