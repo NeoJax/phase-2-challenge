@@ -1,7 +1,16 @@
 // Write a function month(date) to find the month for a given Date object,
 // returing the name of the month as a string
 // ('January', 'February', 'March', 'April', 'May', ... etc).
+// Example:
+// let date = new Date(2017, 08, 17); August 17th 2017
+// month(date); returns "August"
 function month(date){
+  try {
+    date.getMonth();
+  }
+  catch(err) {
+    throw "The correct object was not passed";
+  }
   switch(date.getMonth()){
     case 0:
       return "January";
@@ -46,18 +55,42 @@ function month(date){
 // and returns a string with the words in reverse order. If there is only one
 // word in the string return it unchanged.
 // Consider any series of non-space characters a word.
+// Example:
+// let reverse = "The dog is cool.";
+// reverseSentence(reverse); returns "cool. is dog The"
 function reverseSentence(string){
-  let split = string.split(" ");
-  let reverse = [split.length];
-  for(let i = 0; i < split.length; i++){
-    reverse[split.length-i] = split[i];
+  try {
+    string.split(" ");
   }
+  catch(err) {
+    throw "The correct object was not passed";
+  }
+  let split = string.split(" ");
+  let reverse = [];
+  let reverseStr = "";
+  for(let i = 0; i < split.length; i++){
+    reverse[(split.length-1)-i] = split[i];
+  }
+  reverseStr = reverse.join(" ");
+  reverseStr.trim();
+  return reverseStr;
 }
 
 // Write a function nameProps(obj) that returns the names of the properties
 // an object has in alphabetical order. Ignore symbolic properties
 // and count only the "own properties" (not inherited) of the object.
+// Example:
+// let props = {name: "blah", age: "more blah"};
+// nameProps(props); returns "[ 'name', 'age' ]"
 function nameProps(obj){
+  try {
+    if(!'key' in obj){
+      throw Error;
+    }
+  }
+  catch(err) {
+    throw "The correct object was not passed";
+  }
   let properties = [];
   for(let key in obj){
     properties.push(key);
@@ -70,7 +103,18 @@ function nameProps(obj){
 // an array of strings, a min value, and a max value.
 // It returns a new array containing only the elements that
 // come after min alphabetically and before max.
+// Example:
+// let filter = ['cat', 'dog', 'lizard', 'crab', 'zebra', 'ant'];
+// filterBetween(filter, 'cat', 'dog'); returns [ 'lizard', 'zebra', 'ant' ]
 function filterBetween(array, min, max){
+  try {
+    array.join(" ");
+    min.split(" ");
+    max.split(" ");
+  }
+  catch(err) {
+    throw "The correct object was not passed";
+  }
   let filter = [];
   for(let i = 0; i < array.length; i++){
     if(array[i] < min){
@@ -79,6 +123,7 @@ function filterBetween(array, min, max){
       filter.push(array[i]);
     }
   }
+  return filter;
 }
 
 //Exporting for testing
