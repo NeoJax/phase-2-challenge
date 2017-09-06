@@ -8,6 +8,11 @@ body {
   border-bottom: 1px solid black;
 }
 
+button {
+  border-radius: 5%;
+  background-color: white;
+}
+
 .header {
   display: table-row;
   flex: 0 1 100%;
@@ -17,8 +22,8 @@ body {
 }
 
 .header-right {
-  position: relative;
-  right: 0;
+  position: absolute;
+  right: 1%;
   height: 100%;
 }
 
@@ -40,7 +45,7 @@ body {
 }
 
 .sidebar-item {
-  padding: 1%;
+  padding: 2%;
 }
 
 .movies {
@@ -50,6 +55,21 @@ body {
   padding: 1%;
 }
 
+.movie-title {
+  padding-left: 1%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.movie-header {
+  font-style: italic;
+}
+
 .movie-item {
   padding: 1%;
+}
+
+.movie-right {
+  position: absolute;
+  right: 30%;
 }
