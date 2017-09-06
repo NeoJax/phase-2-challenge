@@ -45,6 +45,11 @@ body {
 
 .movies {
   background-color: white;
-  flex: 1 0 80%;
+  flex: 1 0 78%;
   flex-flow: column wrap;
+  padding: 1%;
+}
+
+.movie-item {
+  padding: 1%;
 }
