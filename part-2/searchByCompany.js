@@ -26,4 +26,18 @@ for(let i = 0; i < search.length; i++) {
   delete search[i].created_at;
 }
 
-console.log(search);
+console.log("[");
+
+for(let i = 0; i < search.length; i++){
+  console.log("  {");
+  console.log("    \"id\": " + search[i].id + ",");
+  console.log("    \"company\": \"" + search[i].company + "\",");
+  console.log("    \"phone\": \"" + search[i].phone + "\"");
+  if(i+1 < search.length){
+    console.log("  },");
+  } else {
+    console.log("  }");
+  }
+}
+
+console.log("]");
