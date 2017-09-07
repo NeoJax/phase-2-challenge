@@ -1,5 +1,5 @@
 When you run a command in the terminal, where does BASH look for that command?
-BASH Looks into the $PATH directories
+BASH Looks into the $PATH directories.
 
 On a UNIX computer, how do you stop a running process?
 You would use control-c if the program is in the foreground or
@@ -7,13 +7,13 @@ You would use control-c if the program is in the foreground or
 
 What packages do you have installed via homebrew?
 I'm not sure if you are asking how to list that or what i have installed so I will put both down.
-Using "brew list" I get
+Using "brew list" I get.
 go		icu4c		openssl		readline
 hub		node		postgresql
 
 
 On a UNIX computer, how do you find the process id of a running process?
-You would type in "ps" and it would be under PID
+You would type in "ps" and it would be under PID.
 
 
 In a terminal, what does control-c do?
@@ -32,6 +32,8 @@ it goes into the directory foo and makes another file named bar.
 Finally it lists the current directory named /Users/steve/foo
 
 How do you set an environment variable in your shell?
+Well first you would name the variable then you would put an equal sign without
+a space and then whatever you wanted to define it. An example is below.
 EXAMPLE='words'
 
 What keyboard shortcut do you use to split the screen in your editor?
@@ -122,14 +124,15 @@ First the command to copy is cp then you would type in what you want copied.
 Then you would type in the directory you want the file to go into.
 /Projects/linked-for-dancers
 In its entirety
-cp README.md /Projects/
+cp README.md /Projects/pinterest-for-dogs
 
 What keyboard shortcut do you use, in your editor, to go to a file in the project you have open?
 CTRL-Tab or CMD="Number of the tab you are switching too."
 
 What files or folders do you want all git repositories to ignore?
 There is an official list at https://github.com/github/gitignore.
-Otherwise there are some common ones like packaged files,
+Otherwise there are some common ones like packaged files, OS generated files,
+credentials.
 
 What is the main difference between Array.map and Array.forEach in JavaScript?
 Map iterates over each item in the array and returns a new array with the same size.

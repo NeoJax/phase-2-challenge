@@ -55,13 +55,13 @@ button {
   padding: 1%;
 }
 
-.movie-title {
+.movie-header {
   padding-left: 1%;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.movie-header {
+.movie-genre {
   font-style: italic;
 }
 
